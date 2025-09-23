@@ -2,21 +2,21 @@
 
 ## Project Metadata
 ### Authors
-- **Team:** Name1, Namw2
+- **Team:** Abdullah Alshammasi, Ammar Alsafwani
 - **Supervisor Name:** Dr. Muzammil Behzad
-- **Affiliations:** SABIC, ARAMCO and KFUPM (write your institution name, and/or KFUPM)
+- **Affiliations:** SABIC, ARAMCO and KFUPM
 
 ## Introduction
-Write 1-2 technical paragraphs (feel free to add images if you would like).
+The paper introduces a trash detection methodology in the field of computer vision using a manually collected images in real world environment. The aim of the paper is build an accurate and reliable litter detection model that is capable of detecting trash in various environment/context. This can be used in environmental monitoring and waste management applications.
 
 ## Problem Statement
-Write 1-2 technical paragraphs (feel free to add images if you would like).
+The trash detection in the wild environment is a challenge due to the lack of comprehensive dataset for training and evaluation of a computer vision model. The available dataset for trash detection has limited representation and often taken in a controlled settings such as plain background, however, litter detection in real world is not that straight forward. Natural and complex settings such as deformed and damaged trashes cause a challenge in identifying trash objects.
 
 ## Application Area and Project Domain
-Write 1-2 technical paragraphs (feel free to add images if you would like).
+The application area of this idea environmental monitoring using drones or satellites, autonomous street cleaning robots and smart city inititatives focusing at waste management. The project domain is computer vision. The sub-domain is object detectoin.
 
 ## What is the paper trying to do, and what are you planning to do?
-Write 1-2 technical paragraphs (feel free to add images if you would like).
+The paper aims to enhance trash detection modeling through collecting and creating rich-dataset, then build a model utlizing the collected dataset. The dataset would have a trash in differnet environments and would be of different types to allow for good training and evaluatoin. Our plan is to take it one step further and describe the trash to enhance the smart cleaning methodology. For example, describing the trash as small or large quantities would help in allocating the proper resources to go to the location for cleaning.
 
 
 # THE FOLLOWING IS SUPPOSED TO BE DONE LATER
