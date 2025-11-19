@@ -2,28 +2,34 @@
 
 ## Project Metadata
 ### Authors
-- **Team:** Abdullah Alshammasi, Ammar Alsafwani
+- **Team:** Abdullah Alshammasi, Ammar Alsafwani, Jafar Abu Qurain
 - **Supervisor Name:** Dr. Muzammil Behzad
 - **Affiliations:** SABIC, ARAMCO and KFUPM
 
 ## Introduction
-The paper introduces a trash detection methodology in the field of computer vision using a manually collected images in real world environment. The aim of the paper is build an accurate and reliable litter detection model that is capable of detecting trash in various environment/context. This can be used in environmental monitoring and waste management applications.
+Litter pollution is one of the serious environmental problems and it affects also smart cities. Trash like bottles, cans, plastic bags and wrappers appears on streets, beaches, parks, rivers and a lot of other places which cause environmental pollution. Using manual monitoring is very slow, expensive and hard to scale. Computer vision models can help in detecting litter in images or videos which will support the city planning and cleaning up campaigns.
+The TACO dataset was created to support this type of research and help solving litter pollution problem. It contains real world images of litter that are taken in different countries and environments and annotated with detailed masks. However, training deep learning models on TACO dataset is challenging as it is small, the classes are not normally distributed and many objects are very small or partially hidden.
+The original TACO paper used Mask R-CNN with a ResNet-50 FPN backbone and showed that the overall Average Precision (AP) is low. In this project, our target was to enhance the litter detection results by using Detectron2 and by simplifying the classification problem into four categories and applying some enhancements we achieved better results.
 
 ## Problem Statement
-The trash detection in the wild environment is a challenge due to the lack of comprehensive dataset for training and evaluation of a computer vision model. The available dataset for trash detection has limited representation and often taken in a controlled settings such as plain background, however, litter detection in real world is not that straight forward. Natural and complex settings such as deformed and damaged trashes cause a challenge in identifying trash objects.
+Training a robust instance segmentation model on TACO is difficult because:
+   •	The dataset has only 1500 images and 4784 annotations
+   •	There are originally 60 classes and many of which have very few instances
+   •	Some objects are tiny or hidden which makes detection harder
+So how can we implement and train a Detectron2-based model on TACO to achieve better test performance while keeping the task reasonable and practical for deployment.
 
 ## Application Area and Project Domain
 The application area of this idea environmental monitoring using drones or satellites, autonomous street cleaning robots and smart city inititatives focusing at waste management. The project domain is computer vision. The sub-domain is object detectoin.
 
 ## What is the paper trying to do, and what are you planning to do?
-The paper aims to enhance trash detection modeling through collecting and creating rich-dataset, then build a model utlizing the collected dataset. The dataset would have a trash in differnet environments and would be of different types to allow for good training and evaluatoin. Our plan is to take it one step further and describe the trash to enhance the smart cleaning methodology. For example, describing the trash as small or large quantities would help in allocating the proper resources to go to the location for cleaning.
+The paper aims to enhance trash detection modeling through collecting and creating rich dataset, then build a model utlizing the collected dataset. The dataset would have a trash in differnet environments and would be of different types to allow for good training and evaluatoin. Our plan is reimplement TACO litter detection using Detectron2 instead of the original Matterport Mask R-CNN, making the label simple into a smaller set of meaningful classes and create a proper train, validation and test splits and evaluate strictly on the test set. Also, train and tune a Mask R-CNN R50-FPN model and measure detection and segmentation performance and lastly compare our results with the original TACO paper and discuss why the metrics differ.
 
 
 # THE FOLLOWING IS SUPPOSED TO BE DONE LATER
 
 ### Project Documents
 - **Presentation:** [Project Presentation](/presentation.pptx)
-- **Report:** [Project Report](/report.pdf)
+- **Report:** [Project Report](/Term_Project_Report.pdf)
 
 ### Reference Paper
 - [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752)
