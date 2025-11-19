@@ -13,9 +13,9 @@ The original TACO paper used Mask R-CNN with a ResNet-50 FPN backbone and showed
 
 ## Problem Statement
 Training a robust instance segmentation model on TACO is difficult because:
-   •	The dataset has only 1500 images and 4784 annotations
-   •	There are originally 60 classes and many of which have very few instances
-   •	Some objects are tiny or hidden which makes detection harder
+- The dataset has only 1500 images and 4784 annotations
+- There are originally 60 classes and many of which have very few instances
+- Some objects are tiny or hidden which makes detection harder
 So how can we implement and train a Detectron2-based model on TACO to achieve better test performance while keeping the task reasonable and practical for deployment.
 
 ## Application Area and Project Domain
