@@ -36,7 +36,7 @@ The paper aims to enhance trash detection modeling through collecting and creati
 - [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752)
 
 ### Reference Dataset
-- [LAION-5B Dataset](https://laion.ai/blog/laion-5b/)
+- [TACO Dataset](http://tacodataset.org/)
 
 
 ## Project Technicalities
