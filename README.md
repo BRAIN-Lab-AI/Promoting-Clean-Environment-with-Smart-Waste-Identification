@@ -33,7 +33,7 @@ The paper aims to enhance trash detection modeling through collecting and creati
 - **Report:** [Project Report](/Term_Project_Report.pdf)
 
 ### Reference Paper
-- [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752)
+- [TACO: Trash Annotations in Context for Litter Detection (https://arxiv.org/abs/2003.06975)
 
 ### Reference Dataset
 - [TACO Dataset](http://tacodataset.org/)
@@ -54,22 +54,23 @@ The paper aims to enhance trash detection modeling through collecting and creati
 - **Conditional Generation:** The process where outputs are generated based on auxiliary inputs, such as textual descriptions.
 
 ### Problem Statements
-- **Problem 1:** Achieving high-resolution and detailed images using conventional diffusion models remains challenging.
-- **Problem 2:** Existing models suffer from slow inference times during the image generation process.
-- **Problem 3:** There is limited capability in performing style transfer and generating diverse artistic variations.
+- **Problem 1:** Limited dataset with 1500 images.
+- **Problem 2:** Large number of classes (60 classes), where some classes had limited instances.
+- **Problem 3:** There is an imbalance in dataset.
+- **Problem 4:** Inaccuracy in detecting small objects such as cigarates.
 
 ### Loopholes or Research Areas
-- **Evaluation Metrics:** Lack of robust metrics to effectively assess the quality of generated images.
-- **Output Consistency:** Inconsistencies in output quality when scaling the model to higher resolutions.
-- **Computational Resources:** Training requires significant GPU compute resources, which may not be readily accessible.
+- **Dataset:** Expanding the dataset to better capture the representation of trash in the open outdoor.
+- **Modeling Approach:** Original model used an old version of TensorFlow.
+- **Computational Resources:** Larger dataset will require significant GPU compute resources, which may not be readily accessible.
 
 ### Problem vs. Ideation: Proposed 3 Ideas to Solve the Problems
 1. **Optimized Architecture:** Redesign the model architecture to improve efficiency and balance image quality with faster inference.
-2. **Advanced Loss Functions:** Integrate novel loss functions (e.g., perceptual loss) to better capture artistic nuances and structural details.
+2. **Reduce Number of Classes:** Reduce number of classes by grouping them to have balance dataset.
 3. **Enhanced Data Augmentation:** Implement sophisticated data augmentation strategies to improve the model’s robustness and reduce overfitting.
 
 ### Proposed Solution: Code-Based Implementation
-This repository provides an implementation of the enhanced stable diffusion model using PyTorch. The solution includes:
+This repository provides an implementation of the enhanced mask R-CNN model using Detectron 2 by PyTorch. The solution includes:
 
 - **Modified UNet Architecture:** Incorporates residual connections and efficient convolutional blocks.
 - **Novel Loss Functions:** Combines Mean Squared Error (MSE) with perceptual loss to enhance feature learning.
@@ -126,6 +127,6 @@ The workflow of the Enhanced Stable Diffusion model is designed to translate tex
     ```
 
 ## Acknowledgments
-- **Open-Source Communities:** Thanks to the contributors of PyTorch, Hugging Face, and other libraries for their amazing work.
-- **Individuals:** Special thanks to bla, bla, bla for the amazing team effort, invaluable guidance and support throughout this project.
-- **Resource Providers:** Gratitude to ABC-organization for providing the computational resources necessary for this project.
+- **Open-Source Communities:** Thanks to the contributors of PyTorch, and other libraries for their amazing work.
+- **Individuals:** Special thanks to Ammar Alsafwani, Abdullah Alshammasi, and Jafar Abu Qurayn for the amazing team effort, invaluable guidance and support throughout this project.
+- **Resource Providers:** Gratitude to Google Colab for providing the computational resources necessary for this project.
