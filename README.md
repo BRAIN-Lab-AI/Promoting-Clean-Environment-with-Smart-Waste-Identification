@@ -42,16 +42,10 @@ The paper aims to enhance trash detection modeling through collecting and creati
 ## Project Technicalities
 
 ### Terminologies
-- **Diffusion Model:** A generative model that progressively transforms random noise into coherent data.
-- **Latent Space:** A compressed, abstract representation of data where complex features are captured.
-- **UNet Architecture:** A neural network with an encoder-decoder structure featuring skip connections for better feature preservation.
-- **Text Encoder:** A model that converts text into numerical embeddings for downstream tasks.
-- **Perceptual Loss:** A loss function that measures high-level differences between images, emphasizing perceptual similarity.
-- **Tokenization:** The process of breaking down text into smaller units (tokens) for processing.
-- **Noise Vector:** A randomly generated vector used to initialize the diffusion process in generative models.
-- **Decoder:** A network component that transforms latent representations back into image space.
-- **Iterative Refinement:** The process of gradually improving the quality of generated data through multiple steps.
-- **Conditional Generation:** The process where outputs are generated based on auxiliary inputs, such as textual descriptions.
+- **Mask R-CNN Model:** A model that can identify objects in images and draw box or outline around them.
+- **TACO:** Trash Annotations in Context. A dataset that contains images for trash in outdoor environment.
+- **AP:** Average precision.
+- **IoU:** Intersection Over Union.
 
 ### Problem Statements
 - **Problem 1:** Limited dataset with 1500 images.
@@ -72,9 +66,8 @@ The paper aims to enhance trash detection modeling through collecting and creati
 ### Proposed Solution: Code-Based Implementation
 This repository provides an implementation of the enhanced mask R-CNN model using Detectron 2 by PyTorch. The solution includes:
 
-- **Modified UNet Architecture:** Incorporates residual connections and efficient convolutional blocks.
-- **Novel Loss Functions:** Combines Mean Squared Error (MSE) with perceptual loss to enhance feature learning.
-- **Optimized Training Loop:** Reduces computational overhead while maintaining performance.
+- **Reduce Number of Classes:** Due to limited dataset, number of classes were reduced to 4.
+- **Optimized Training Loop:** Reduces computational overhead while enhancing performance.
 
 ### Key Components
 - **`TACO_Enhanced.ipynb`**: Contains the modified model with enhancements.
@@ -82,48 +75,31 @@ This repository provides an implementation of the enhanced mask R-CNN model usin
 - **`annotations.json`**: Contains images annotations.
 
 ## Model Workflow
-The workflow of the Enhanced Stable Diffusion model is designed to translate textual descriptions into high-quality artistic images through a multi-step diffusion process:
+The workflow of the Enhanced Trash Detection model is designed to improve trash detection and classification:
 
 1. **Input:**
-   - **Text Prompt:** The model takes a text prompt (e.g., "A surreal landscape with mountains and rivers") as the primary input.
-   - **Tokenization:** The text prompt is tokenized and processed through a text encoder (such as a CLIP model) to obtain meaningful embeddings.
-   - **Latent Noise:** A random latent noise vector is generated to initialize the diffusion process, which is then conditioned on the text embeddings.
-
-2. **Diffusion Process:**
-   - **Iterative Refinement:** The conditioned latent vector is fed into a modified UNet architecture. The model iteratively refines this vector by reversing a diffusion process, gradually reducing noise while preserving the text-conditioned features.
-   - **Intermediate States:** At each step, intermediate latent representations are produced that increasingly capture the structure and details dictated by the text prompt.
+   - **Image:** The model takes an image from TACO dataset
+     
+2. **Enhanced Process:**
+   - **Process Refinement:** Used Detectron2 by PyTorch 2.8. Optimized iterations. Reduced number of classes to 4
 
 3. **Output:**
-   - **Decoding:** The final refined latent representation is passed through a decoder (often part of a Variational Autoencoder setup) to generate the final image.
-   - **Generated Image:** The output is a synthesized image that visually represents the input text prompt, complete with artistic style and detail.
+   - **Generated Image:** The output is an image with trash class prediction.
 
 ## How to Run the Code
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/yourusername/enhanced-stable-diffusion.git
-    cd enhanced-stable-diffusion
+    git clone https://github.com/BRAIN-Lab-AI/Promoting-Clean-Environment-with-Smart-Waste-Identification/tree/main
+    cd enhanced-taco
     ```
 
-2. **Set Up the Environment:**
-    Create a virtual environment and install the required dependencies.
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows use: venv\Scripts\activate
-    pip install -r requirements.txt
-    ```
+2. **Download TACO Dataset:**
+    Use download_taco_image.py to download TACO dataset
 
-3. **Train the Model:**
-    Configure the training parameters in the provided configuration file and run:
-    ```bash
-    python train.py --config configs/train_config.yaml
-    ```
-
-4. **Generate Images:**
-    Once training is complete, use the inference script to generate images.
-    ```bash
-    python inference.py --checkpoint path/to/checkpoint.pt --input "A surreal landscape with mountains and rivers"
-    ```
+3. **Run TACO_Enhanced.ipynb:**
+    Run the code in this file to install dependencies and train model.
+   
 
 ## Acknowledgments
 - **Open-Source Communities:** Thanks to the contributors of PyTorch, and other libraries for their amazing work.
