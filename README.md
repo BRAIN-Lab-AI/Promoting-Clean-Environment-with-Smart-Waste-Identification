@@ -77,10 +77,9 @@ This repository provides an implementation of the enhanced mask R-CNN model usin
 - **Optimized Training Loop:** Reduces computational overhead while maintaining performance.
 
 ### Key Components
-- **`model.py`**: Contains the modified UNet architecture and other model components.
-- **`train.py`**: Script to handle the training process with configurable parameters.
-- **`utils.py`**: Utility functions for data processing, augmentation, and metric evaluations.
-- **`inference.py`**: Script for generating images using the trained model.
+- **`TACO_Enhanced.ipynb`**: Contains the modified model with enhancements.
+- **`download_taco_image.py`**: Script to download TACO dataset.
+- **`annotations.json`**: Contains images annotations.
 
 ## Model Workflow
 The workflow of the Enhanced Stable Diffusion model is designed to translate textual descriptions into high-quality artistic images through a multi-step diffusion process:
