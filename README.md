@@ -98,7 +98,7 @@ The workflow of the Enhanced Trash Detection model is designed to improve trash 
     Use download_taco_image.py to download TACO dataset
 
 3. **Run TACO_Enhanced.ipynb:**
-    Run the code in this file to install dependencies and train model.
+    Run the code in this file to install dependencies and train model. You need to update google drive path.
    
 
 ## Acknowledgments
