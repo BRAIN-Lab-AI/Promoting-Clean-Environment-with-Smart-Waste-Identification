@@ -29,8 +29,8 @@ The paper aims to enhance trash detection modeling through collecting and creati
 # THE FOLLOWING IS SUPPOSED TO BE DONE LATER
 
 ### Project Documents
-- **Presentation:** [Project Presentation]([/presentation.pptx](https://github.com/BRAIN-Lab-AI/Promoting-Clean-Environment-with-Smart-Waste-Identification/blob/main/Presentation.pptx)
-- **Report:** [Project Report](/Term_Project_Report.pdf)
+- **Presentation:** [Project Presentation]([presentation.pptx](https://github.com/BRAIN-Lab-AI/Promoting-Clean-Environment-with-Smart-Waste-Identification/blob/main/Presentation.pptx)
+- **Report:** [Project Report](https://github.com/BRAIN-Lab-AI/Promoting-Clean-Environment-with-Smart-Waste-Identification/blob/main/Term%20Project%20Report.pdf)
 
 ### Reference Paper
 - [TACO: Trash Annotations in Context for Litter Detection (https://arxiv.org/abs/2003.06975)
