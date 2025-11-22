@@ -29,7 +29,7 @@ The paper aims to enhance trash detection modeling through collecting and creati
 # THE FOLLOWING IS SUPPOSED TO BE DONE LATER
 
 ### Project Documents
-- **Presentation:** [Project Presentation](/presentation.pptx)
+- **Presentation:** [Project Presentation]([/presentation.pptx](https://github.com/BRAIN-Lab-AI/Promoting-Clean-Environment-with-Smart-Waste-Identification/blob/main/Presentation.pptx)
 - **Report:** [Project Report](/Term_Project_Report.pdf)
 
 ### Reference Paper
