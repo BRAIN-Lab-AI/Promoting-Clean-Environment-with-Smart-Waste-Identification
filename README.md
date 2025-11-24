@@ -102,7 +102,7 @@ The workflow of the Enhanced Trash Detection model is designed to improve trash 
    C. Then the notebook can be all run with no issue after downloading the images.
    
    '''
-    #Define paths
+    Define paths
    
     DATASET_PATH = '/content/drive/MyDrive/DLP/TACO'
    
