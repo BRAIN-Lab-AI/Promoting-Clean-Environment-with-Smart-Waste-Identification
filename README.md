@@ -100,8 +100,10 @@ The workflow of the Enhanced Trash Detection model is designed to improve trash 
    B. Inside this folder put the annotations.json and create another fodler name it as data to so images will be downloaded there.
    
    C. Then the notebook can be all run with no issue after downloading the images.
-   use below cod
-   '''#Define paths
+   
+   '''
+    #Define paths
+   
     DATASET_PATH = '/content/drive/MyDrive/DLP/TACO'
    
     ANNOTATIONS_FILE = os.path.join(DATASET_PATH, 'annotations.json')
@@ -109,6 +111,7 @@ The workflow of the Enhanced Trash Detection model is designed to improve trash 
     IMAGES_DIR = os.path.join(DATASET_PATH, 'data')
    
     OUTPUT_DIR = '/content/drive/MyDrive/DLP/TACO/taco_output'
+   
    '''
 
 5. **Clone the Repository:**
