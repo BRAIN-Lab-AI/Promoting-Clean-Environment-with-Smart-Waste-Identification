@@ -29,7 +29,7 @@ The paper aims to enhance trash detection modeling through collecting and creati
 # THE FOLLOWING IS SUPPOSED TO BE DONE LATER
 
 ### Project Documents
-- **Presentation:** [Project Presentation][presentation.pptx](https://github.com/BRAIN-Lab-AI/Promoting-Clean-Environment-with-Smart-Waste-Identification/blob/main/Presentation.pptx)
+- **Presentation:** [Project Presentation](https://github.com/BRAIN-Lab-AI/Promoting-Clean-Environment-with-Smart-Waste-Identification/blob/main/Presentation.pptx)
 - **Report:** [Project Report](https://github.com/BRAIN-Lab-AI/Promoting-Clean-Environment-with-Smart-Waste-Identification/blob/main/Term%20Project%20Report.pdf)
 
 ### Reference Paper
@@ -88,16 +88,33 @@ The workflow of the Enhanced Trash Detection model is designed to improve trash 
 
 ## How to Run the Code
 
-1. **Clone the Repository:**
+1. **Set tha a path for annotations.json, make a folder in the same path, name it as "data" to download the images inside this folder using download_taco_image.py and then change the paths on TACO_Enhanced.ipynb notebook to you new path.**
+
+2. **Download TACO Dataset:**
+    Use download_taco_image.py to download TACO dataset.
+
+3. **If anyone want to use Google Colab here are the folder need to be created to match the path on the notebook as below:**
+   A. Create a folder in your google drive name it as DLP.
+   B. Inside this folder put the annotations.json and create another fodler name it as data to so images will be downloaded there.
+   C. Then the notebook can be all run with no issue after downloading the images.
+   ['''# Mount Google Drive
+   from google.colab import drive
+   drive.mount('/content/drive')
+   import os
+   # Define paths
+   DATASET_PATH = '/content/drive/MyDrive/DLP/TACO'
+   ANNOTATIONS_FILE = os.path.join(DATASET_PATH, 'annotations.json')
+   IMAGES_DIR = os.path.join(DATASET_PATH, 'data')
+   OUTPUT_DIR = '/content/drive/MyDrive/DLP/TACO/taco_output'
+   ''']
+
+4. **Clone the Repository:**
     ```bash
     git clone https://github.com/BRAIN-Lab-AI/Promoting-Clean-Environment-with-Smart-Waste-Identification/tree/main
     cd enhanced-taco
     ```
 
-2. **Download TACO Dataset:**
-    Use download_taco_image.py to download TACO dataset
-
-3. **Run TACO_Enhanced.ipynb:**
+5. **Run TACO_Enhanced.ipynb:**
     Run the code in this file to install dependencies and train model. You need to update google drive path.
    
 
