@@ -94,10 +94,14 @@ The workflow of the Enhanced Trash Detection model is designed to improve trash 
     Use download_taco_image.py to download TACO dataset.
 
 3. **If anyone want to use Google Colab here are the folder need to be created to match the path on the notebook as below:**
+   
    A. Create a folder in your google drive name it as DLP.
+   
    B. Inside this folder put the annotations.json and create another fodler name it as data to so images will be downloaded there.
+   
    C. Then the notebook can be all run with no issue after downloading the images.
-   ['''# Mount Google Drive
+   
+   '''# Mount Google Drive
    from google.colab import drive
    drive.mount('/content/drive')
    import os
@@ -106,15 +110,15 @@ The workflow of the Enhanced Trash Detection model is designed to improve trash 
    ANNOTATIONS_FILE = os.path.join(DATASET_PATH, 'annotations.json')
    IMAGES_DIR = os.path.join(DATASET_PATH, 'data')
    OUTPUT_DIR = '/content/drive/MyDrive/DLP/TACO/taco_output'
-   ''']
+   '''
 
-4. **Clone the Repository:**
+5. **Clone the Repository:**
     ```bash
     git clone https://github.com/BRAIN-Lab-AI/Promoting-Clean-Environment-with-Smart-Waste-Identification/tree/main
     cd enhanced-taco
     ```
 
-5. **Run TACO_Enhanced.ipynb:**
+6. **Run TACO_Enhanced.ipynb:**
     Run the code in this file to install dependencies and train model. You need to update google drive path.
    
 
